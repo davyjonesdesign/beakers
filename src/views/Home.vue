@@ -91,5 +91,12 @@ export default {
   padding: 30px 80px
 
 }
+@media only screen and (max-width: 768px) {
+ .home-links a {
+  margin: 10px;
+  padding: 15px 30px
+
+}
+}
 
 </style>
