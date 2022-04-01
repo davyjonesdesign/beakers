@@ -33,7 +33,6 @@
     </div>
 
     <div class="home-links">
-      <router-link to="/">Home</router-link>
       <router-link to="/menu">Menu</router-link>
       <router-link to="/about">About</router-link>
     </div>
@@ -93,8 +92,8 @@ export default {
 }
 @media only screen and (max-width: 768px) {
  .home-links a {
-  margin: 10px;
-  padding: 15px 30px
+  margin: 15px;
+  padding: 20px 40px
 
 }
 }
