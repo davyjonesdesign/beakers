@@ -7,10 +7,14 @@
       </div>
       <div class="nav-links">
         <router-link to="/">Home</router-link>
+        <router-link to="/menu">Menu</router-link>
         <router-link to="/about">About</router-link>
       </div>
     </div>
     <router-view />
+    <footer>
+      <h5>created by:</h5> <h4>Davy Jones</h4>
+    </footer>
   </div>
 </template>
 
@@ -120,5 +124,16 @@ a:hover {
  body {
    font-size: 80%;
  }
+}
+footer {
+  height: 40px;
+  /* padding: 10px; */
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer h4 {
+  margin: 0 0 0 10px;
 }
 </style>
