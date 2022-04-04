@@ -110,6 +110,7 @@ export default {
 .header {
   margin: 40px 15px 0;
   letter-spacing: .5px;
+  width: 200px;
   background: var(--sunrise);
   padding: 5px;
   text-align: center;
