@@ -1,40 +1,44 @@
 <template>
   <div class="item-wrapper" >
     <div class="item-left">
-      <p style="opacity: 0;">{{ eat.id }}</p>
+      <div class="item-left_top">
+        <p style="opacity: 0;">{{ side.id }}</p>
+        <p>{{ side.id }}</p>
+      </div>
       <h2 class="item-element">
-       {{ eat.element }}
+        {{ side.element }}
       </h2>
-      <p>{{ eat.id }}</p>
     </div>
+   
     <div class="item-right">
-      <h3>{{ eat.title }} <span>— $ {{ eat.cost }}</span></h3>
-      <p class="item-description">{{ eat.description }}</p>
+      <h3>{{ side.title }}</h3>
+      <!-- <p class="item-description">{{ side.description }}</p> -->
+      <p class="item-description">$ {{ side.cost }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import EatService from "@/services/EatService.js";
+import SideService from "@/services/SideService.js";
 
 export default {
   name: "Menu",
   props: {
-    eat: {
+    side: {
       type: Object,
       required: true
     }
   },
   data() {
     return {
-      eats: null,
+      sides: null,
     }
   },
   mounted() {
-    // get events from mock db when component is created
-    EatService.getItems()
+    // get events from mock db when component is crsiped
+    SideService.getItems()
       .then((response) => {
-        this.eats = response.data;
+        this.sides = response.data;
       })
       // .then((r) => {
       // for (let i = 0; i < r.data.length; i++) {
@@ -43,7 +47,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-      console.log(this.eats)
+      console.log(this.sips)
   },
 };
 </script>
@@ -52,44 +56,49 @@ export default {
 <style scoped>
 .item-wrapper {
   display: flex;
-  height: 125px;
+  height: 100px;
 }
 .item-left {
+  border: 1px solid var(--pumpkin);
+  padding: 0px;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+}
+.item-left_top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 125px;
-  width: 125px;
-  padding: 0px;
-  border: 1px solid var(--sunrise)
+  width: 100px;  
 }
 .item-left p {
   align-self: flex-start;
-  margin: 2px 5px 0 0;
+  margin:2px 5px 0 0;
 }
 .item-element {
   /* align-self: center;
   justify-self: center; */
   font-size: 48px;
-  color: var(--sunrise);
+  color: var(--pumpkin);
 }
 .item-right {
-  height: 125px;
-  border: 1px solid var(--sunrise);
+  height: 100px;
+  border: 1px solid var(--pumpkin);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
-  width: 300px;
+  width: 200px;
   padding: 0px 15px
 }
 .item-right h3 {
-  color: var(--sunrise);
+  color: var(--pumpkin);
 }
 .item-right span {
   color: var(--off-white);
   font-weight: 500;
 }
+
 @media only screen and (max-width: 768px) {
   .item-wrapper {
     height: 75px;
@@ -114,4 +123,5 @@ export default {
     font-size: 18px;
   }
 }
+
 </style>

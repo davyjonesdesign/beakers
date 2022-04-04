@@ -11,6 +11,12 @@
     <div class="cat-wrapper">
       <EatCard v-for="eat in eats" :key="eat.id" :eat="eat" />
     </div>
+    <h2 class="header sides">
+      sides
+    </h2>
+    <div class="cat-wrapper cat-wrapper_sides">
+      <SideCard v-for="side in sides" :key="side.id" :side="side" />
+    </div>
     <h2 class="header sips">
       sips
     </h2>
@@ -25,17 +31,21 @@ import EatCard from "@/components/EatCard.vue";
 import EatService from "@/services/EatService.js";
 import SipCard from "@/components/SipCard.vue";
 import SipService from "@/services/SipService.js";
+import SideCard from "@/components/SideCard.vue";
+import SideService from "@/services/SideService.js";
 
 export default {
   name: "Home",
   components: {
     EatCard,
-    SipCard
+    SipCard,
+    SideCard
   },
   data() {
     return {
       eats: null,
-      sips: null
+      sips: null,
+      sides: null
     }
   },
   created() {
@@ -44,27 +54,23 @@ export default {
       .then(response => {
         this.eats = response.data
       })
-      // .then((r) => {
-      // for (let i = 0; i < r.data.length; i++) {
-      //   this.ports.push(r.data[i]);
-      // }
       .catch(error => {
         console.log(error)
       })
-    // const tempPorts = ref(this.data)
-    // get events from mock db when component is created
     SipService.getItems()
       .then(response => {
         this.sips = response.data
       })
-      // .then((r) => {
-      // for (let i = 0; i < r.data.length; i++) {
-      //   this.ports.push(r.data[i]);
-      // }
       .catch(error => {
         console.log(error)
       })
-    // const tempPorts = ref(this.data)
+    SideService.getItems()
+      .then(response => {
+        this.sides = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 };
 </script>
@@ -117,7 +123,9 @@ export default {
 }
 .sips {
   background: var(--sky);
-
+}
+.sides {
+  background: var(--pumpkin);
 }
 .cat-wrapper {
   margin: 0 15px;
@@ -128,19 +136,26 @@ export default {
   overflow-x: scroll;
   padding: 10px;
 }
+.cat-wrapper_sides {
+  grid-template-rows: auto auto;
+
+}
 .cat-wrapper::-webkit-scrollbar {
     width: 1em;
 }
  
 .cat-wrapper::-webkit-scrollbar-track {
-    border: 1px solid var(--navy);
-    -webkit-box-shadow: none;
-    /* background: var(--navy); */
+  border: 1px solid var(--navy);
+  -webkit-box-shadow: none;
+  background: var(--midnight);
 }
  
 .cat-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--navy);
   outline: none;
+}
+.cat-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--off-white);
 }
 
 </style>

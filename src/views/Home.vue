@@ -52,19 +52,19 @@ export default {
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
-  min-height: calc(100vh - 121px);
+  /* justify-content: space-between; */
+  padding:0;
+  min-height: calc(100vh);
   
 }
 .splash-img {
   width: 100vw;
   object-fit: fill;
-  height: 200px;
+  height: 250px;
 }
 .logo {
   padding: 0 0 20px;
-  height: calc(60vh - 144px);
+  height: calc(60vh);
   background: var(--midnight);
   display: flex;
   align-items: center;
@@ -72,8 +72,8 @@ export default {
   background-image: url('../assets/matheus-frade-KO46ZfbNdtY-unsplash_edit.jpg');
   background-size: cover;
   background-attachment: fixed;
-  border: 1px solid var(--navy)
-  /* opacity: .3; */
+  border-bottom: 1px solid var(--navy);
+  margin-bottom: 100px;
 }
 .logo svg {
   fill: var(--off-white);
@@ -81,14 +81,17 @@ export default {
 
 }
 .home-links {
-  font-size: 1.65em;
+  font-size: 1.5em;
   height: 100px;
   align-self: center;
 }
 .home-links a {
+  background: var(--navy);
   margin: 30px;
-  padding: 30px 80px
-
+  padding: 20px 50px
+}
+.home-links a:hover {
+  background: var(--off-white);
 }
 @media only screen and (max-width: 768px) {
  .home-links a {

@@ -36,18 +36,21 @@ body {
 
 }
 body::-webkit-scrollbar {
-    width: 1em;
+  width: 1em;
 }
  
 body::-webkit-scrollbar-track {
-    border: 1px solid var(--navy);
-    -webkit-box-shadow: none;
-    background: var(--midnight);
+  border: 1px solid var(--navy);
+  -webkit-box-shadow: none;
+  background: var(--midnight);
 }
  
 body::-webkit-scrollbar-thumb {
   background-color: var(--navy);
   outline: none;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--off-white);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -67,16 +70,16 @@ a {
   transition: var(--transition);
   color: var(--midnight);
   text-decoration: none;
-  border: 1px solid var(--sunrise) ;
+  border: 1px solid var(--off-white) ;
   padding: 10px 30px;
   font-weight: bold;
   height: 22px;
-  color: var(--sunrise);
+  color: var(--off-white);
   margin: 0 5px;
   /* background: var(--navy); */
 }
 a:hover {
-  background: var(--sunrise);
+  background: var(--off-white);
   color: var(--midnight);
 }
 
@@ -93,21 +96,21 @@ a:hover {
 
 #nav {
   z-index: 10000;
-  background: var(--midnight);
+  background: var(--navy);
   position: sticky;
   top: 0;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--navy);
+  /* border: 2px solid var(--navy); */
 }
 
 
 #nav a.router-link-exact-active {
-  color: var(--sunrise);
-  border-color: var(--sunrise);
-  background: #ffba5285;
+  color: var(--midnight);
+  border-color: var(--off-white);
+  background: var(--off-white);
 }
 
 #nav .logo {
@@ -128,7 +131,8 @@ a:hover {
 footer {
   height: 40px;
   /* padding: 10px; */
-  background: var(--navy);
+  background: var(--midnight);
+  border-top: 1px solid var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -80,7 +80,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
-  width: 400px;
+  width: 300px;
   padding: 0px 15px
 }
 .item-right h3 {
