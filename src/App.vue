@@ -99,10 +99,12 @@ a:hover {
   background: var(--navy);
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
+  padding: 0 20px;
   justify-content: space-between;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 1);
   /* border: 2px solid var(--navy); */
 }
 
@@ -115,9 +117,7 @@ a:hover {
 
 #nav .logo {
   width: 44px;
-  height: 44px;
-  margin: 0 10px;
-  
+  height: 44px;  
 }
 #nav svg {
   fill: var(--off-white);
@@ -131,7 +131,7 @@ a:hover {
 footer {
   height: 40px;
   /* padding: 10px; */
-  background: var(--midnight);
+  background: var(--navy);
   border-top: 1px solid var(--navy);
   display: flex;
   align-items: center;

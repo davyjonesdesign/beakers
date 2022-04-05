@@ -83,7 +83,7 @@ export default {
   /* display: flex;
   flex-direction: column;
   overflow-y: scroll; */
-  padding: 10px
+  padding: 10px 20px;
 }
 .splash-img {
   width: 100vw;
@@ -108,7 +108,7 @@ export default {
 
 }
 .header {
-  margin: 40px 15px 0;
+  margin: 40px 60px 0;
   letter-spacing: .5px;
   width: 200px;
   background: var(--sunrise);
@@ -118,7 +118,7 @@ export default {
 }
 .menu-header {
   font-weight: 800;
-  margin: 40px 30px;
+  margin: 40px 60px;
   /* text-align: center; */
   /* text-decoration: underline; */
 }
@@ -129,7 +129,7 @@ export default {
   background: var(--pumpkin);
 }
 .cat-wrapper {
-  margin: 0 15px;
+  margin: 0 60px;
   display: grid;
   grid-template-rows: auto auto auto;
   border: 1px solid var(--navy);

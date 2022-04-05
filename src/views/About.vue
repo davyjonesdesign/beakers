@@ -5,7 +5,7 @@
 </template>
 <style scoped>
 .about {
-  padding:40px 30px;
+  padding: 40px 60px;
   min-height: calc(100vh - 141px);
 }
 </style>
