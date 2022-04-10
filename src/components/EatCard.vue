@@ -8,7 +8,7 @@
       <p>{{ eat.id }}</p>
     </div>
     <div class="item-right">
-      <h3>{{ eat.title }} <span class="item-cost">— ${{ eat.cost }}</span></h3>
+      <h3>{{ eat.title }} <span>— $ {{ eat.cost }}</span></h3>
       <p class="item-description">{{ eat.description }}</p>
     </div>
   </div>
@@ -66,7 +66,6 @@ export default {
 .item-left p {
   align-self: flex-start;
   margin: 2px 5px 0 0;
-  font-size: 20px;
 }
 .item-element {
   /* align-self: center;
@@ -84,10 +83,6 @@ export default {
   width: 300px;
   padding: 0px 15px
 }
-.item-cost {
-  font-weight: 700;
-  letter-spacing: 1px;
-}
 .item-right h3 {
   color: var(--sunrise);
 }
@@ -102,9 +97,6 @@ export default {
   .item-left {
     height: 75px;
     width: 75px;
-  }
-  .item-left p {
-    font-size: 16px;
   }
   .item-right {
     height: 75px;
