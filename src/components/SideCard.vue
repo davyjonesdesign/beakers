@@ -13,7 +13,7 @@
     <div class="item-right">
       <h3>{{ side.title }}</h3>
       <!-- <p class="item-description">{{ side.description }}</p> -->
-      <p class="item-description">$ {{ side.cost }}</p>
+      <p class="item-description item-cost">${{ side.cost }}</p>
     </div>
   </div>
 </template>
@@ -74,6 +74,7 @@ export default {
 .item-left p {
   align-self: flex-start;
   margin:2px 5px 0 0;
+  font-size: 20px;
 }
 .item-element {
   /* align-self: center;
@@ -98,6 +99,10 @@ export default {
   color: var(--off-white);
   font-weight: 500;
 }
+.item-cost {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
 @media only screen and (max-width: 768px) {
   .item-wrapper {
@@ -105,6 +110,12 @@ export default {
   }
   .item-left {
     height: 75px;
+    width: 75px;
+  }
+  .item-left p {
+    font-size: 16px;
+  }
+  .item-left_top {
     width: 75px;
   }
   .item-right {
