@@ -8,7 +8,7 @@
       <p>{{ sip.id }}</p>
     </div>
     <div class="item-right">
-      <h3>{{ sip.title }} <span>— $ {{ sip.cost }}</span></h3>
+      <h3>{{ sip.title }} <span>— ${{ sip.cost }}</span></h3>
       <p class="item-description">{{ sip.description }}</p>
     </div>
   </div>
@@ -66,6 +66,7 @@ export default {
 .item-left p {
   align-self: flex-start;
   margin:2px 5px 0 0;
+  font-size: 20px;
 }
 .item-element {
   /* align-self: center;
@@ -98,6 +99,9 @@ export default {
   .item-left {
     height: 75px;
     width: 75px;
+  }
+  .item-left p {
+    font-size: 16px;
   }
   .item-right {
     height: 75px;

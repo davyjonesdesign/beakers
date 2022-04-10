@@ -8,7 +8,7 @@
       <div class="nav-links">
         <router-link to="/">Home</router-link>
         <router-link to="/menu">Menu</router-link>
-        <router-link to="/about">About</router-link>
+        <!-- <router-link to="/about">Location</router-link> -->
       </div>
     </div>
     <router-view />
@@ -23,7 +23,7 @@ html {
   margin: 0;
   --off-white: #F0FFFF;
   --midnight: #152726;
-  --navy: #2D4D74;
+  --navy: #000000;
   --sunrise: #FFBA52;
   --pumpkin: #C25908;
   --sky: #A2F0FA;
@@ -104,7 +104,7 @@ a:hover {
   align-items: center;
   padding: 0 20px;
   justify-content: space-between;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 1);
+  /* box-shadow: 4px 0 10px rgba(0, 0, 0, 1); */
   /* border: 2px solid var(--navy); */
 }
 

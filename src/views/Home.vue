@@ -31,11 +31,63 @@
             </g>
           </svg>
     </div>
+    <div class="info">
+      <h2>Contact</h2>
 
-    <div class="home-links">
+      <div class="contact">
+        <h4 class="phone">Phone Number: <span>219-123-4567</span></h4>
+      </div>
+      
+    </div>
+    <div class="info">
+      <h2>Hours</h2>
+
+      <div class="hours">
+        <div class="day">
+          <h4>Monday</h4>
+          <p>7am — 10pm</p>
+        </div>
+        <div class="day">
+          <h4>Tuesday</h4>
+          <p>7am — 10pm</p>
+        </div>
+        <div class="day">
+          <h4>Wednesday</h4>
+          <p>7am — 10pm</p>
+        </div>
+        <div class="day">
+          <h4>Thursday</h4>
+          <p>7am — 10pm</p>
+        </div>
+        <div class="day">
+          <h4>Friday</h4>
+          <p>7am — 11pm</p>
+        </div>
+        <div class="day">
+          <h4>Saturday</h4>
+          <p>7am — 11pm</p>
+        </div>
+        <div class="day">
+          <h4>Sunday</h4>
+          <p>7am — 11pm</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="info">
+      <h2>Location</h2>
+
+      <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.700128606944!2d-87.06277243555066!3d41.46741882485152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88119a0a33f1b6a7%3A0x840912ff822eb966!2sRadius!5e0!3m2!1sen!2sus!4v1649547520149!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h4 class="address">1234 Lincolnway<br>Valparaiso, IN 46383</h4>
+      </div>
+      
+    </div>
+    
+    <!-- <div class="home-links">
       <router-link to="/menu">Menu</router-link>
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -49,6 +101,38 @@ export default {
 </script>
 
 <style scoped>
+.info {
+  margin: 0 60px 80px;
+}
+.info h2 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.hours {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.day {
+  border: 1px solid white;
+  padding: 40px 10px;
+  
+}
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone span {
+  font-weight: 700;
+}
 .home-wrapper {
   display: flex;
   flex-direction: column;
@@ -72,8 +156,7 @@ export default {
   background-image: url('../assets/matheus-frade-KO46ZfbNdtY-unsplash_edit.jpg');
   background-size: cover;
   background-attachment: fixed;
-  border-bottom: 1px solid var(--navy);
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .logo svg {
   fill: var(--off-white);
